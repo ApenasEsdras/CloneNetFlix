@@ -1,0 +1,107 @@
+:root {
+  --vermelho: #e50941;
+  --Preto: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* elementos base  */
+body {
+  background: var(--Preto);
+  font-family: "Arial", Times New Roman, Times, san serif;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: var(--vermelho);
+  font-family: "Arial black", Times New Roman, Times, san serif;
+  font-size: 40px;
+}
+header nav a {
+  text-decoration: none;
+  color: #aaaaaa;
+  margin-right: 10px;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+/* edição do filme principal  */
+
+.filme-principal {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("/CloneNetFlix/img/capa-house.jpg");
+
+  height: 400px;
+  background-size: cover; /*juntifica a imagem de fundo*/
+
+  display: flex;
+  flex-direction: column; /*alinha os itens ao sentro da coluna*/
+  justify-content: center;
+  align-items: flex-start; /* fazer com que os elemetos começem pela esquerda*/
+}
+.filme-principal .descricao {
+  margin: top 10px;
+  margin-bottom: 40px;
+}
+.filme-principal .title {
+  margin-top: 15%;
+  font-size: 40px;
+  font-family: "Arial", sans-serif;
+}
+.botao {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none; /*esse none retira formatação padrão*/
+  color: white;
+
+  padding: 15px 30px; /*ajuste do espaço interno do elemento*/
+  margin-right: 15px;
+  font-size: 12px;
+
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.botao:hover {
+  background-color: white;
+  color: black;
+}
+/* <<<<<<<<<<<<<<<<<<<resposividade >>>>>>>>>>>>>>>> */
+.botao i {
+  margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+/* <<<<<<<<<<<<<<<<<<<resposividade >>>>>>>>>>>>>>>> */
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.carrocel-filmes {
+  margin-top: 5px;
+}
+.item:hover {
+  -webkit-transform: scale(0.8);
+  transform: scale(1.1);
+  top: -10px;
+  margin-top: -10px;
+  transition: 0.4s;
+}
